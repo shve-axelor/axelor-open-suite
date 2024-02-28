@@ -1,0 +1,13 @@
+---
+name: Adrenalin
+code: adrenalin
+typeSelect: standard
+installOrder: 2430
+description: |
+  Adrenalin configuration
+image: RGPDLogo.png
+modules:
+  axelor-adrenalin
+dependsOn:
+  - base
+sequence: 60

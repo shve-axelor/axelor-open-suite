@@ -1,0 +1,22 @@
+plugins {
+	id 'com.axelor.app'
+}
+
+apply from: "../libs.gradle"
+apply from: "../version.gradle"
+
+apply {
+	version = openSuiteVersion
+}
+
+axelor {
+	title "Axelor Adrenalin"
+	description "Axelor Adrenalin Module"
+}
+
+dependencies {
+	api project(":modules:axelor-base")
+	api project(":modules:axelor-account")
+	api project(":modules:axelor-crm")
+	api project(":modules:axelor-project")
+}
