@@ -136,11 +136,11 @@
     <context name="_isFromCrm" expr="eval:true"/>
   </action-view>
 
-  <menuitem name="crm-root-customer-follow-up" parent="crm-root" title="Customer follow-up"
-    order="400"/>
+  <!-- <menuitem name="crm-root-customer-follow-up" parent="crm-root" title="Customer follow-up"
+    order="400"/> -->
 
-  <menuitem name="crm-root-customers" parent="crm-root-customer-follow-up"
-    title="Customers" action="crm.root.customers" order="100"/>
+  <menuitem name="crm-root-customers" parent="crm-root"
+    title="Customers" action="crm.root.customers" order="400"/>
 
   <action-view name="crm.root.customers" title="Customers"
     model="com.axelor.apps.base.db.Partner">
@@ -154,8 +154,8 @@
     <context name="_domain" expr="self.isContact = false AND self.isCustomer = true"/>
   </action-view>
 
-  <menuitem name="crm-root-contacts" parent="crm-root-customer-follow-up" title="Contacts"
-    action="crm.root.contacts" order="200"/>
+  <!-- <menuitem name="crm-root-contacts" parent="crm-root-customer-follow-up" title="Contacts"
+    action="crm.root.contacts" order="200"/> 
 
   <action-view name="crm.root.contacts" title="Contacts"
     model="com.axelor.apps.base.db.Partner">
@@ -167,10 +167,11 @@
     <view-param name="default-search-filters" value="contact-filters-prospects-clients"/>
     <domain>self.isContact = true AND self.isEmployee = false</domain>
     <context name="_domain" expr="self.isContact = true AND self.isEmployee = false"/>
-  </action-view>
-
+  </action-view> 
+  
+  
   <menuitem name="crm-root-catalog" parent="crm-root" title="Catalogs"
-    action="crm.root.catalogs" order="500" if="__config__.app.getApp('crm')?.getIsManageCatalogs()"/>
+    action="crm.root.catalogs" order="500" if="__config__.app.getApp('crm')?.getIsManageCatalogs()"/> 
 
   <action-view name="crm.root.catalogs" title="Catalogs"
     model="com.axelor.apps.crm.db.Catalog">
@@ -215,7 +216,7 @@
     <context name="_todayDateTime" expr="eval:__config__.app.getTodayDateTime()"/>
     <context name="_newDate" expr="eval: __datetime__.plusDays(5)"/>
   </action-view>
-
+ -->
   <menuitem name="crm-root-opportunity" parent="crm-root" title="Opportunities" order="300"/>
 
   <menuitem name="crm-my-opportunity" parent="crm-root-opportunity"
@@ -235,7 +236,7 @@
   </action-view>
 
   <menuitem name="crm-opened-opportunity" parent="crm-root-opportunity"
-    title="Opened opportunities" action="crm.opened.opportunity" order="200"/>
+    title="Open opportunities" action="crm.opened.opportunity" order="200"/>
 
   <action-view name="crm.opened.opportunity" title="Opened opportunities"
     model="com.axelor.apps.crm.db.Opportunity" home="true">
@@ -251,7 +252,7 @@
   </action-view>
 
   <menuitem name="crm-closed-opportunity" parent="crm-root-opportunity"
-    title="Closed opportunities" action="crm.closed.opportunity" order="300"/>
+    title="Close opportunities" action="crm.closed.opportunity" order="300"/>
 
   <action-view name="crm.closed.opportunity" title="Closed opportunities"
     model="com.axelor.apps.crm.db.Opportunity" home="true">
@@ -272,10 +273,10 @@
     <call class="com.axelor.apps.crm.web.CalendarController" method="showMyEvents"/>
   </action-method>
 
-  <menuitem name="crm-root-report" parent="crm-root" title="Reportings" order="1100"
-    icon="fa-bar-chart"/>
+  <!-- <menuitem name="crm-root-report" parent="crm-root" title="Reportings" order="1100"
+    icon="fa-bar-chart"/> -->
 
-  <menuitem name="crm-conf" parent="crm-root" title="Configuration" order="1200"
+  <!-- <menuitem name="crm-conf" parent="crm-root" title="Configuration" order="1200"
     icon="fa-cog"/>
 
   <menuitem name="crm-conf-lead-source" parent="crm-conf" title="Leads Source"
@@ -361,7 +362,7 @@
     <view type="form" name="crm-batch-form"/>
     <view-param name="search-filters" value="crm-batch-filters"/>
   </action-view>
-
+ -->
   <!-- Top Menu for Activity and Create Entry for opportunity.... -->
 
   <menuitem name="top-menu-crm" title="CRM" order="1" top="true" left="false"
@@ -538,7 +539,7 @@
     <view type="dashboard" name="crm.calls.dashboard"/>
   </action-view>
 
-  <menuitem title="Roles" name="crm-conf-partner-roles" parent="crm-conf"
+ <!--  <menuitem title="Roles" name="crm-conf-partner-roles" parent="crm-conf"
     action="crm.conf.partner.roles" order="700"/>
 
   <action-view name="crm.conf.partner.roles" title="Roles"
@@ -573,7 +574,7 @@
     <view type="grid" name="lead-status-grid"/>
     <view type="form" name="lead-status-form"/>
   </action-view>
-
+ -->
   <menuitem title="Sales pipeline follow-up" name="crm-root-crm-reporting"
     parent="crm-root-customer-follow-up" action="crm.root.crm.reporting" order="400"/>
   <action-view name="crm.root.crm.reporting" title="Sales pipeline follow-up"
