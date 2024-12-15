@@ -189,7 +189,7 @@
           onSelect="action-purchase-order-attrs-compute-tax-number-domain"
           onChange="action-purchase-order-method-empty-fiscal-position-if-not-compatible,action-purchase-order-method-fiscal-position-on-change"/>
         <field name="fiscalPosition" colSpan="3" canNew="false" canEdit="false"
-          readonlyIf="statusSelect > 2"
+          readonlyIf="statusSelect > 2" hidden="true"
           onSelect="action-purchase-order-attrs-fiscal-position-domain"
           onChange="action-purchase-order-method-fiscal-position-on-change,action-purchase-order-method-compute"/>
         <field name="supplierPartner.purchaseOrderInformation" css="bold red" colSpan="12"
@@ -260,7 +260,7 @@
           onChange="action-purchase-order-method-update-amount-to-be-spread-over-the-timetable"
           if-module="axelor-supplychain"/>
       </panel>
-      <panel name="printingPanel" title="Printing">
+      <panel name="printingPanel" hidden="true" title="Printing">
         <field name="printingSettings" canEdit="false"/>
         <field name="groupProductsOnPrintings"
           if="__config__.app.getApp('base')?.getIsRegroupProductsOnPrintings()" colSpan="6"/>

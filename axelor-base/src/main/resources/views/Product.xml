@@ -469,7 +469,7 @@
         <button name="updateProductsPricesBtn" title="Update products prices"
           onClick="save,action-product-method-update-products-prices"/>
       </panel>
-      <panel name="taskPanel" title="Task templates"
+      <panel name="taskPanel" title="Task templates" hidden="true"
         if="__config__.app.isApp('business-project') &amp;&amp; __config__.app.getApp('business-project').enableTaskTemplatesByProduct"
         if-module="axelor-business-project">
         <field name="taskTemplateSet" widget="TagSelect" colSpan="12"/>

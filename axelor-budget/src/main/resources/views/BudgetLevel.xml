@@ -132,9 +132,9 @@
             hideIf="statusSelect == 'draft'"/>
         </panel>
 
-        <field name="commentString" widget="html"/>
+        <field name="commentString" title="Comments" widget="html"/>
       </panel>
-      <panel name="globalBudgetLevelButtonPanel" colSpan="3" stacked="true">
+      <panel name="globalBudgetLevelButtonPanel" hidden="true" colSpan="3" stacked="true">
         <button name="validBtn" title="validateBtn" showIf="statusSelect== 'draft'"
           colSpan="12" onClick="action-budget-level-group-valid-btn-onClick"/>
         <button name="archivedBtn" title="archiveBtn" showIf="statusSelect == 'valid'"
@@ -334,7 +334,7 @@
     onSave="action-budget-level-group-global-budget-onsave">
 
     <panel-include view="budget-level-form"/>
-    <panel name="masterDetailPanel" colSpan="12" css="border-solid border-red">
+    <panel name="masterDetailPanel" colSpan="12" css="border-solid border-red" hidden="true">
       <field name="budgetLevelList" widget="MasterDetail" summary-view="true" title="Groups"
         colSpan="12" form-view="budget-level-intermediate-form"
         grid-view="budget-level-included-grid" canEdit="statusSelect == 'draft'"

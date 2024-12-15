@@ -244,7 +244,7 @@
       </panel>
       <panel-dashlet name="leadMarketingCampaignPanel" title="Marketing campaign"
         if="__config__.app.isApp('marketing')" if-module="axelor-marketing"
-        action="action-lead-view-marketing-campaigns" colSpan="12" height="500"/>
+        action="action-lead-view-marketing-campaigns" colSpan="12" height="500" hidden="true"/>
     </panel-tabs>
 
     <panel name="actionsPanel" sidebar="true"
@@ -279,8 +279,8 @@
     <panel sidebar="true" name="marketingPanel" title="Marketing" colSpan="12">
       <field name="leadScoringSelect" widget="ImageSelect" x-labels="false" colSpan="6"/>
       <field name="sizeSelect" colSpan="6"/>
-      <field name="isKeyAccount" colSpan="6"/>
-      <field name="isNurturing" colSpan="6"/>
+      <field name="isKeyAccount" hidden="true" colSpan="6"/>
+      <field name="isNurturing" hidden="true" colSpan="6"/>
       <field name="source" canEdit="false" colSpan="6" form-view="source-form"
         grid-view="source-grid" canNew="true"/>
       <field name="type" grid-view="partner-category-grid" form-view="partner-category-form"

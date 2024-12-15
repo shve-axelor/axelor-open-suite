@@ -331,10 +331,10 @@
       <panel name="otherPartnerDetailsPanel">
         <field name="registrationCode" hideIf="partnerTypeSelect== 2" colSpan="4"
           onChange="action-method-partner-registration-code-onChange"/>
-        <field name="siren" hideIf="partnerTypeSelect== 2" colSpan="4" readonly="true"/>
-        <field name="nic" hideIf="partnerTypeSelect== 2" colSpan="4" readonly="true"/>
-        <field name="saleTurnover" hideIf="partnerTypeSelect== 2"/>
-        <field name="mainActivity" hideIf="partnerTypeSelect== 2" domain="self.isFinal = true"
+        <field name="siren" hidden="true" colSpan="4" readonly="true"/>
+        <field name="nic" hidden="true" colSpan="4" readonly="true"/>
+        <field name="saleTurnover" hidden="true"/>
+        <field name="mainActivity" hidden="true" domain="self.isFinal = true"
           form-view="main-activity-form"/>
         <field name="taxNbr" hideIf="partnerTypeSelect== 2"/>
         <field name="paymentDelay" if-module="axelor-cash-management"
@@ -510,11 +510,11 @@
         <panel-dashlet name="receivedEmailsPanel" title="Received emails"
           action="action-partner-method-view-received-emails" colSpan="12" height="550"/>
       </panel>
-      <panel name="marketingCampaignPanel" title="Marketing campaigns" showIf="id != null"
-        if-module="axelor-crm" hideIf="isEmployee" if="__config__.app.isApp('marketing')">
+      <!-- <panel name="marketingCampaignPanel" hidden="true" title="Marketing campaigns"
+        if-module="axelor-crm" if="__config__.app.isApp('marketing')">
         <panel-dashlet name="marketingCampaignsPanel"
           action="action-partner-view-marketing-campaigns" colSpan="12" height="800"/>
-      </panel>
+      </panel>-->
       <panel name="customerPanel" title="Customer" if-module="axelor-sale" showIf="isCustomer"
         if="__config__.app.isApp('sale')">
         <field name="saleOrderInformation"/>

@@ -40,7 +40,7 @@
     </panel>
 
     <panel name="sidePanel" sidebar="true">
-      <field name="anonymizer" canNew="true" canEdit="true" form-view="anonymizer-form"/>
+      <field name="anonymizer" hidden="true" canNew="true" canEdit="true" form-view="anonymizer-form"/>
       <field name="isArchiveData" widget="boolean-switch"/>
       <button name="registerActivateBtn"
         onClick="action-processing-register-validate-check-options,action-gdpr-record-activate-register,save"

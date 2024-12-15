@@ -121,7 +121,7 @@
     </extend>
     <extend target="//field[@name='department']">
       <insert position="after">
-        <field name="isKeyAccount" colSpan="3"/>
+        <field name="isKeyAccount" hidden="true" colSpan="3"/>
         <field name="isNurturing" colSpan="3"/>
         <field name="sizeSelect" colSpan="6"/>
       </insert>
